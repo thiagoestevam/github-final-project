@@ -2,9 +2,7 @@
 # Este script calcula o juro simples dado o principal,
 # a taxa de juro anual e o período de tempo em anos.
 # Não use isso em produção. Apenas para fins de exemplo.
-# Autor: Upkar Lidder (IBM)
-# Autores adicionais:
-# <seu nome de usuário no GitHub>
+# Autor: Thiago Estevam (github.com/thiagoestevam)
 # Entrada:
 # p, valor principal
 # t, período de tempo em anos
@@ -17,6 +15,6 @@ echo "Digite a taxa de juro por ano:"
 read r
 echo "Digite o período de tempo em anos:"
 read t
-s=`expr $p \* $t \* $r / 100`
+s=$((p * t * r / 100))  # Alternativa moderna para o cálculo
 echo "O juro simples é: "
 echo $s
